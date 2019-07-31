@@ -7,9 +7,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+require('./app/controllers/authController')(app);
+
+// Welcome Page
 app.get('/', (req, res) => {
-    res.send('OK');
-})
+    res.send('Node API is on Fire!!');
+});
 
 
 app.listen(port, () => {

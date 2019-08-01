@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const authController = require('../controllers/authController');
 const userController = require('../controllers/userController');
 
 // Main route for application
@@ -19,12 +18,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// Auth routes
-
-router.post('/auth/register', authController.register);
-
 // Users routes
-
 // List all Users
 router.get('/users', userController.index);
 // Show one User

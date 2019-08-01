@@ -1,11 +1,33 @@
 <%- include('./partials/header')%>
 
-<div class="container" style="background-color: black">
-    <div class="nav">
-        <div class="col-3" style="background-color: red">
-            <h4>Test API from Hell</h4>            
+<div class="container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="row mb-auto">
+        <div class="col-7">
+            <a href="/">
+                <h3 class="masthead-brand">Study API</h3>
+            </a>
+        </div>
+        <div class="col-5">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="/">Home</a>
+                <a class="nav-link" href="https://github.com/matheus-H23/node-api" target="_blank">Github</a>
+            </nav>
         </div>
     </div>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Don't Panic! </h1>
+        <p class="lead">This is a api created for study purpose, so don't use it at all. So Long, and Thanks for All the Fish!</p>
+        <p class="lead">
+            <a href="https://github.com/matheus-H23/node-api/blob/master/README.md" target="_blank" class="btn btn-lg btn-secondary">Documentation</a>
+        </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Developed by <a href="https://github.com/matheus-H23" target="_blank">@Matheus Henrique</a> in 2019</p>
+        </div>
+    </footer>
 </div>
 
 <%- include('./partials/footer')%>

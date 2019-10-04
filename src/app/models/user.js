@@ -1,34 +1,12 @@
-const mongoose = require('../../config/database/index');
-const bcrypt = require('bcryptjs');
-
-const UserSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        require: true,
-    },
-    email: {
-        type: String,
-        unique: true,
-        require: true,
-        lowercase: true,
-    },
-    password: {
-        type: String,
-        require: true,
-        select: false,
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-    },
-});
-
-UserSchema.pre('save', async function(next) {
-    const hash = await bcrypt.hash(this.password, 10);
-    this.password = hash;
-    
-    next();
-})
-
-const User = mongoose.model('User', UserSchema);
-module.exports = User;
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    name: { type: DataTypes.STRING, allowNull: false },
+    email: { type: DataTypes.STRING, allowNull: false },
+    password: { type: DataTypes.STRING, allowNull: false }
+  }, {});
+  User.associate = function(models) {
+    // associations can be defined here
+  };
+  return User;
+};

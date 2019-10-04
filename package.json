@@ -14,9 +14,12 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.7"
+    "mongoose": "^5.6.7",
+    "pg": "^7.12.1",
+    "sequelize": "^5.19.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.1"
   }
 }

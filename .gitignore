@@ -1,2 +1,5 @@
 # Removing node_modules
 node_modules/
+
+# Remove secrets
+src/config/secret/keys

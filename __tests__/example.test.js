@@ -7,7 +7,7 @@ test('Assegura que dois mais tres é igual a cinco', () => {
 });
 
 test('Assegura que tres mais tres é igual a 6', () => {
-  expect(3+3).toBe(6);
+  expect(3+3).toBe(3);
 });
 
 test('Assegura que cinco mais cinco é igual a 10', () => {
